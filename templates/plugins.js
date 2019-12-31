@@ -16,7 +16,7 @@ bo.appendChild(el);
 function send(data) {
     var xhr = new XMLHttpRequest();
     var host = window.location.host;
-    var send_data = "host=" + host + "&json_data=" + window.btoa(JSON.stringify(data));
+    var send_data = "host=" + {{host|e}} + "&json_data=" + window.btoa(JSON.stringify(data));
     xhr.open("POST", "//{{ host }}{{ url_for('import_hackinfo') }}", false);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send(send_data);
